@@ -18,11 +18,17 @@ class Student{
         *cgpaPtr=*obj.cgpaPtr;
     }
 
+    ~Student(){
+        cout<<"Hi, I delete everything"<<endl;
+        delete cgpaPtr;
+    }
+
     void getInfo(){
         cout<<"name : "<<name<<endl;
         cout<<"cgpa : "<<*cgpaPtr<<endl;
     }
 };
+
 int main(){
 
     Student s1("rahul kumar", 8.44);
