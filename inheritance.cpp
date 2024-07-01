@@ -30,6 +30,12 @@ public:
     }
 };
 
+
+class gradStudent:public student{
+public:
+    string research;
+};
+
 int main(){
     student s1;
     s1.name="rahul";
@@ -37,5 +43,13 @@ int main(){
     s1.roll=1;
 
     s1.getInfo();
+
+    gradStudent s2;
+    s2.name="tony starc";
+    s2.research="quantum";
+
+    cout<<s2.name<<endl;
+    cout<<s2.research<<endl;
+
     return 0;
 }
