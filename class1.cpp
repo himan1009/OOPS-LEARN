@@ -17,6 +17,11 @@ class Teacher{
         subject=s;
         salary=sal;
     }
+
+    Teacher(string name, string dept){
+        this->name=name;
+        this->dept=dept;
+    }
     // properties / attributes
     string name;
     string dept;
@@ -55,6 +60,7 @@ int main(){
     Student S1;
 
     Teacher T2("HIMAN", "ECE", "CN", 300000);
+    Teacher T3("Aditi", "CSE");
     T1.name="Himan";
     T1.subject="OOPS";
     T1.setSalary(250000);
@@ -67,5 +73,6 @@ int main(){
     cout<<S1.name<<endl;
     cout<<T1.dept<<endl;
     T2.getInfo();
+    T3.getInfo();
     return 0;
 }
