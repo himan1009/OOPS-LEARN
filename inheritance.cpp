@@ -11,7 +11,7 @@ public:
     //     this->age=age;
     // }
     person(){
-
+        cout<<"parent constrctor"<<endl; 
     }
 
 };
@@ -20,7 +20,10 @@ class student:public person{
 public:
     int roll;
 
-    void getInfo(){
+    student(){
+        cout<<"child constructor"<<endl;
+    }
+    void getInfo(){ 
         cout<<name<<endl;
         cout<<age<<endl;
         cout<<roll<<endl;
