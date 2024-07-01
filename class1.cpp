@@ -4,8 +4,19 @@ using namespace std;
 class Teacher{
     private:
     double salary;
-    
+
     public:
+    Teacher(){
+        cout<<"HI, I am constructor"<<endl;
+        dept="CSE1";
+    }
+
+    Teacher(string n, string d, string s, double sal){
+        name=n;
+        dept=d;
+        subject=s;
+        salary=sal;
+    }
     // properties / attributes
     string name;
     string dept;
@@ -26,6 +37,11 @@ class Teacher{
     double getSalary(){
         return salary;
     }
+
+    void getInfo(){
+        cout<<"name : "<<name<<endl;
+        cout<<"subject : "<<subject<<endl;
+    }
 };
 
 class Student{
@@ -35,11 +51,11 @@ class Student{
 };
 
 int main(){
-    Teacher T1;
+    Teacher T1; // constructor called
     Student S1;
 
+    Teacher T2("HIMAN", "ECE", "CN", 300000);
     T1.name="Himan";
-    T1.dept="CSE";
     T1.subject="OOPS";
     T1.setSalary(250000);
 
@@ -49,5 +65,7 @@ int main(){
     cout<<T1.name<<endl;
     cout<<T1.getSalary()<<endl;
     cout<<S1.name<<endl;
+    cout<<T1.dept<<endl;
+    T2.getInfo();
     return 0;
 }
